@@ -90,7 +90,6 @@ async def help(ctx):
     embed.add_field(name=".listen", value="Ustaw muzykę jaką słucham",inline=True)
     embed.add_field(name=".watch", value="Ustaw film jaki oglądam",inline=True)
     embed.add_field(name=".kto",value="no kto", inline=True)
-    embed.add_field(name=".mikrocypek",value="Mikrocypek głaszcze kotka :OO",inline=True)
     embed.add_field(name=".klubowicz",value="Sprawdź czy nadajesz się do klubu.",inline=True)
     embed.add_field(name=".rasista", value="Sprawdź czy jesteś rasistą.", inline=True)
     await ctx.send(embed=embed)
@@ -146,15 +145,7 @@ async def hello(ctx):
     tab = ["Hej","Siema","Witaj","Elo","Salam Alaykum","Yo Nigga", "Wassup"]
     await ctx.channel.send(random.choice(tab))
 
-#Changes bot status
-@client.command()
-async def mikrocypek(ctx):
-    await ctx.channel.send(":smiling_imp:")
-    while True:
-        await ctx.author.send("https://pl.xhamster.com/videos/cyprian-knapinski-i-am-fighting-myself-rocky-niebieskooki-13140827", delete_after = 10)
-
 #Purge command (Clears chat for (value) messages) u need administrator permission
-#clearowanie czatu
 @client.command()
 @has_permissions(administrator=True)
 async def clear(ctx, value : int):
